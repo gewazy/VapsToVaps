@@ -1,5 +1,5 @@
 # VapsToVaps
-## Czyszczenie pliku VAPS, przygotowanie do wgrania fo GPSeismic
+## Czyszczenie pliku VAPS, przygotowanie do wgrania do GPSeismic
 
 ### Skrypt obrabia plik *.vaps. 
 - usuwa nagłówek
