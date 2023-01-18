@@ -23,4 +23,4 @@
 - `MINIVIB = ('8')`  # po przecinku podaj ID wszystkich univibów. Jeśli nie ma żadnego, podaj jakiś ID niewystępujący wśród wibratorów
 - `RED_MINI = 2.15`  # redukcja wysokości dla univiba (wysokość zamontowania anteny)
 - `RED_H50 = 2.75`  # redukcja wysokości dla dużego wibratora (wysokość zamontowania anteny)
-- `SPS_PATTERN` = '_daily.sps'` # 'końcówka pliku sps, który skrypt ma wyszukać w katalogu z dniówką
+- `SPS_PATTERN = '_daily.sps'` # 'końcówka pliku sps, który skrypt ma wyszukać w katalogu z dniówką
