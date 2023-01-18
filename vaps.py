@@ -32,6 +32,7 @@ CZAS = 5  # podaj jak długo ma się wyświetlać raport po przygotowaniu plikó
 MINIVIB = ('8')  # po przecinku podaj ID wszystkich univibów. Jeśli nie ma żadnego, podaj jakiś ID niewystępujący wśród wibratorów
 RED_MINI = 2.15  # redukcja wysokości dla univiba (wysokość zamontowania anteny)
 RED_H50 = 2.75  # redukcja wysokości dla dużego wibratora (wysokość zamontowania anteny)
+SPS_PATTERN = '_daily.sps' # 'końcówka pliku sps, który skrypt ma wyszukać w katalogu z dniówką
 
 
 Tk().withdraw()
@@ -40,7 +41,7 @@ print("Otworz plik: " + open_filename)
 file = open(open_filename, 'r')
 
 sps = []  # przechowuje punkty zaliczone (z pliku *.sps)
-with open(f'{open_filename[:-5]}_daily.sps', 'r') as file2:
+with open(f'{open_filename[:-5]}{SPS_PATTERN}', 'r') as file2:
     for row in file2:
         sps.append(row[4:10] + row[12:20] + row[23])
 print(f'\nW pliku sps jest {len(sps)} puntów.\n')
