@@ -61,7 +61,7 @@ for line in file:
         if '0   0   0 0 0 0  0  0  0      0.0       0.0   0.0' not in line:  # usuwa punkty bez pozycji GPS
             if '$ERROR' not in line:  # usuwa punkty z błędami
                 point = line[11:26]
-                if point in sps:  # usuwa voidy (punkty których nie ma w sps - ie)
+                if point in sps:  # usuwa voidy (punkty których nie ma w sps - ie); do poprawy (bug przy PDOP>99)
                     out_file.write(line[:75] +
                                    str(round((float(line[209:216]) + float(line[219:225]) if line[208] == ',' else (float(line[210:217]) + float(line[220:226]))) -
                                              (RED_MINI if line[28] in MINIVIB else RED_H50), 1)) + line[80:92] + 14 * ' ' + line[200] + 4 * ' ' + line[111:])
